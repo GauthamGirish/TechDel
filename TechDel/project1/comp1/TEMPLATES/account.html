@@ -1,0 +1,108 @@
+{% load static %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{% static 'user_details/css/materialize.min.css' %}"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <link href="{% static 'user_details/css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection">
+    <!--body style = "background: url('https://images.unsplash.com/photo-1518117743130-17d4de973e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'); background-size: 100%;"-->
+
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="{% static 'user_details/js/materialize.min.js' %}"></script>
+    </body>
+  </html>
+<body style = "background: url('https://images.unsplash.com/photo-1518117743130-17d4de973e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'); background-size: 100%;">
+<br></br>
+<br></br>
+
+<div class="row">
+    <div class ="col s12 ">
+      <div class=" red-text center align m6 offset-m6">
+          <h3>Your Account </h3>
+      </div>
+      {%for user in details%}
+          <form method=post>
+            {%csrf_token%}
+          <br></br>
+          <div class="row">
+          <div class="input-field col s4 offset-m2 white-text">
+              <input id="first_name" type="text" class="validate" name="first_name" value="{{user.first_name}}">
+              <label class="active" for="first_name" >First Name</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="last_name" type="text" class="validate" name="last_name" value="{{user.last_name}}">
+              <label for="last_name" class="active" >Last Name</label>
+            </div>
+          
+            <div class="input-field col s8 offset-m2">
+              <input id="email" type="email" class="validate" name="email" value="{{user.email}}">
+              <label for="email" class="active">Email</label>
+              <span class="helper-text" data-error="wrong" data-success="right"></span>
+            </div>
+            <div class="input-field col s8 offset-m2">
+              <input id="username" type="text" class="validate" name="username" disabled value="{{user.username}}">
+              <label for="username" class="active">Username</label>
+          </div>
+          <div class="input-field col s8 offset-m2">
+              <input id="password" type="password" class="validate" name="password" value="{{user.passw}}">
+              <label for="password" class="active">Password</label>
+          </div>
+          <div class="input-field col s8 offset-m2">
+              <input id="passwordConfirm" type="password" name="passwordConfirm" value="{{user.cpass}}">
+              <label id="lblPasswordConfirm" for="passwordConfirm" data-error="Password not match" data-success="Password Match" class="active"> Confirm Password</label>
+          </div>
+          <div class = "form-field">
+            <div class="row">
+            <button class="btn-large waves-effect red darken-1 col s9 offset-m2 left align" style ="width:25%" type="submit" name="action" formaction="" onsubmit="" >Update
+            
+            </button>
+            <button class="btn-large waves-effect red darken-1 col s9 offset-m2 left align" style ="width:25%" type="submit" name="action" formaction="../homepage1/" onsubmit="" >Back
+            
+            </button>
+            </div>
+          {% endfor %}
+      </html>
+
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script>
+ $("#password").on("focusout", function (e) {
+    if ($(this).val() != $("#passwordConfirm").val()) {
+        $("#passwordConfirm").removeClass("valid").addClass("invalid");
+    } else {
+        $("#passwordConfirm").removeClass("invalid").addClass("valid");
+    }
+});
+
+$("#passwordConfirm").on("keyup", function (e) {
+    if ($("#password").val() != $(this).val()) {
+        $(this).removeClass("valid").addClass("invalid");
+    } else {
+        $(this).removeClass("invalid").addClass("valid");
+    }
+});
+
+$(document).ready(function() {
+    M.updateTextFields();
+  });
+</script>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

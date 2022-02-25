@@ -1,0 +1,41 @@
+insert into user_details_products values(1,"1001","Phones","iPhone 11","A12 Bionic chip,256GB","113000","https://images.unsplash.com/photo-1569328869944-e7cf0bd09dd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80");
+insert into user_details_products values(2,"1002","Phones","Oneplus 7Pro","Snapdragon 855,256GB","50499","https://images.unsplash.com/photo-1552830746-ea13d7f797d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+insert into user_details_products values(3,"1003","Phones","Samsung","Snapdragon820,256GB","63000","https://images.unsplash.com/photo-1498661705887-3778d9ecb4ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+insert into user_details_products values(4,"1004","Watches","Tag","Analog","84000","https://images.unsplash.com/photo-1558977908-c688c39850c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+insert into user_details_products values(5,"1005","Watches","G-Shock","Digital","10999","https://images.unsplash.com/photo-1543956872-37cfc5474a71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+insert into user_details_products values(6,"1006","Watches","Swatch","Analog","113000","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.swatch.com%2Fen_us%2F&psig=AOvVaw35HBjb08lmrpI5uHAV_oxJ&ust=1573805771820000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCC_cGh6eUCFQAAAAAdAAAAABAE");
+insert into user_details_products values(7,"1007","Laptop","Hp Spectre "," i7 Octa-core processor,256GB","113000","https://images.unsplash.com/photo-1529429612779-c8e40ef2f36d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+insert into user_details_products values(8,"1008","Laptop","MacBook Pro"," A12 Bionic Chip,512GB","113000","https://images.unsplash.com/photo-1496917756835-20cb06e75b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80");
+insert into user_details_products values(9,"1009","Cameras","Nikon","Sony IDM sensor 182mp","113000","https://images.unsplash.com/photo-1500370564600-3d53413ff1e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+insert into user_details_products values(10,"1010","Cameras","Canon","Sony IDM sensor 182mp","113000","https://images.unsplash.com/photo-1498050842100-717f08672ac6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+insert into user_details_products values(11,"1011","Cameras","Canon ","Sony IDM sensor 182mp","113000","https://images.unsplash.com/photo-1499760296637-38bf38dd84fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+insert into user_details_products values(12,"1012","Cameras","Canon","Sony IDM sensor 182mp","113000","https://images.unsplash.com/photo-1486900387710-6236808a9973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+
+insert into user_details_products values(1,"1001",""phones","iphone","iphone 11 ,A12 Bionic chip,256GB","113000","images/product_1.jpg")
+
+
+
+update user_details_products 
+set product_pic="https://images.unsplash.com/photo-1569328869944-e7cf0bd09dd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"
+where id=1;
+
+
+update user_details_products 
+set product_pic="https://images.unsplash.com/photo-1500370564600-3d53413ff1e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+where id=9;
+
+update user_details_products 
+set product_pic="https://images.unsplash.com/photo-1498661705887-3778d9ecb4ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+where id=3;
+
+update user_details_products 
+set product_pic="https://images.unsplash.com/photo-1558977908-c688c39850c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+where id=4;
+
+update user_details_products 
+set product_pic="https://images.unsplash.com/photo-1529429612779-c8e40ef2f36d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+where id=6;
+
+update user_details_products
+set product_name="Oneplus 6"
+where id=2;
